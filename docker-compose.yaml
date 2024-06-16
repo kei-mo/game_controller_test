@@ -1,13 +1,13 @@
 services:
-  openscope-jog-test:
+  jog-test:
     build:
       context: .
       dockerfile: Dockerfile
     image: jog-test
     tty: true
     privileged: true
-    command: bash -c "python3 inputstest.py"
-    # command: bash -c "python3 pygametest.py"
+    # command: bash -c "python3 inputstest.py"
+    command: bash -c "python3 pygametest.py"
     # command: bash -c "./entrypoint_jog_test.sh"
     volumes:
       - "/dev/input:/dev/input"
